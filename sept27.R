@@ -33,6 +33,12 @@ for(i in 1:length(x)-1){
 }
 sum(product.x)
 
+prod(x)
+myprods<- NULL
+for(i in 1:length(x)){
+  myprods[i]<- prod(x[1:i])
+}
+myprods
 # 2c
 ten.x<- NULL
 for (i in 1:length(x)){
