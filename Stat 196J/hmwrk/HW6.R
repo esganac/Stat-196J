@@ -1,3 +1,8 @@
+######## Caitlin Esgana #######
+######## Norris  ##############
+######## STAT 196J ############
+
+######## HW 6: Decision Trees and Cross-valdiation ######## 
 
 #### Problem 1 ####
 ## a ##
@@ -47,19 +52,10 @@ proportion.misclassified<- 1- accuracy # subtracts accuracy from 1
 proportion.misclassified # 0.1788
 
 # iii
-
-# sort.data<- data.train[order(data.train$Y), ]
-# yes.default<- subset(data.train, Y== 1)
-# yes.tree<- tree(Y~., data= yes.default)
-# yes.pred<- predict(yes.tree, newdata= data.test, type= "class")
-# yes.compare<- cbind(yes.pred,data.test$Y)
-# table(yes.pred, data.test$Y)
-# 
-# no.default<- subset(data.train, Y== 0)
-# no.tree<- tree(Y~., data= no.default)
-# no.pred<- predict(no.tree, newdata= data.test, type= "class")
-# no.compare<- cbind(no.pred,data.test$Y)
-# table(no.pred, data.test$Y)
+yes.default<- 2227/(2227+1066)
+yes.default
+no.default<- 455/(11252+455)
+no.default
 
 # iv
 # There are 4 terminal nodes in the unpruned tree.
@@ -119,8 +115,7 @@ splitForest
 # The predicted category for observations in this node is versicolor.
 
 ## d ##
-# Pruning the tree will cause all observations in node 6 to split
-# in the next level of the tree.
+# The splitting rule will cause node 6 to split at Petal.Width < 1.75.
 
 ## e ##
 # calculating a deviance gives the impurities
